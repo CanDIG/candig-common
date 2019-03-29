@@ -1,11 +1,11 @@
 """
 Utilities used across many GA4GH packages
 """
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
 
-import StringIO
+
+
+
+import io
 import contextlib
 import fnmatch
 import functools
@@ -120,9 +120,9 @@ def captureOutput(func, *args, **kwargs):
     tuple (stdout, stderr) as strings.
     """
     stdout = sys.stdout
-    sys.stdout = StringIO.StringIO()
+    sys.stdout = io.StringIO()
     stderr = sys.stderr
-    sys.stderr = StringIO.StringIO()
+    sys.stderr = io.StringIO()
     try:
         func(*args, **kwargs)
         stdoutOutput = sys.stdout.getvalue()
@@ -146,7 +146,7 @@ def zipLists(*lists):
             msg = "List at index {} has length {} != {}".format(
                 i + 1, len(list_), length)
             raise AssertionError(msg)
-    return zip(*lists)
+    return list(zip(*lists))
 
 
 def getLinesFromLogFile(stream):

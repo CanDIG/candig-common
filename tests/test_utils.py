@@ -1,9 +1,9 @@
 """
 Tests for common utilities
 """
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
 
 import mock
 import tempfile
@@ -218,20 +218,20 @@ class TestUtilsPrintMocked(AbstractTestUtils):
         def timedFunc():
             aList.append(1)
         timedFunc()
-        self.assertEquals(aList, [1])
-        self.assertEquals(self.printMock.call_count, 1)
+        self.assertEqual(aList, [1])
+        self.assertEqual(self.printMock.call_count, 1)
 
     @mock.patch('__builtin__.print', printMock)
     def testLog(self):
         utils.log("message")
-        self.assertEquals(self.printMock.call_count, 1)
+        self.assertEqual(self.printMock.call_count, 1)
 
     @mock.patch('__builtin__.print', printMock)
     def testRequireExecutables(self):
         utils.requireExecutables(self.executables)
         with self.assertRaises(SystemExit):
             utils.requireExecutables([self.nonexistentExecutable])
-        self.assertEquals(self.printMock.call_count, 2)
+        self.assertEqual(self.printMock.call_count, 2)
 
 
 class TestCaptureOutput(unittest.TestCase):
