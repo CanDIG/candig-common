@@ -1,10 +1,6 @@
 """
 Emulates a Travis CI run
 """
-
-
-
-
 import ga4gh.common
 import ga4gh.common.cli as cli
 import ga4gh.common.utils as utils

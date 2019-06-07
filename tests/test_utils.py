@@ -1,11 +1,7 @@
 """
 Tests for common utilities
 """
-
-
-
-
-import mock
+import unittest.mock as mock
 import tempfile
 import subprocess
 import unittest
@@ -210,7 +206,7 @@ class TestUtilsPrintMocked(AbstractTestUtils):
     def setUp(self):
         self.printMock.reset_mock()
 
-    @mock.patch('__builtin__.print', printMock)
+    @mock.patch('builtins.print', printMock)
     def testTimed(self):
         aList = []
 
@@ -221,12 +217,12 @@ class TestUtilsPrintMocked(AbstractTestUtils):
         self.assertEqual(aList, [1])
         self.assertEqual(self.printMock.call_count, 1)
 
-    @mock.patch('__builtin__.print', printMock)
+    @mock.patch('builtins.print', printMock)
     def testLog(self):
         utils.log("message")
         self.assertEqual(self.printMock.call_count, 1)
 
-    @mock.patch('__builtin__.print', printMock)
+    @mock.patch('builtins.print', printMock)
     def testRequireExecutables(self):
         utils.requireExecutables(self.executables)
         with self.assertRaises(SystemExit):

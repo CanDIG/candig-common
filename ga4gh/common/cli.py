@@ -1,10 +1,6 @@
 """
 Common cli functionality
 """
-
-
-
-
 import argparse
 import operator
 

@@ -1,10 +1,6 @@
 """
 Utilities used across many GA4GH packages
 """
-
-
-
-
 import io
 import contextlib
 import fnmatch

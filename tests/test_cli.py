@@ -1,10 +1,6 @@
 """
 Tests for common cli functionality
 """
-
-
-
-
 import unittest
 
 import ga4gh.common.cli as cli

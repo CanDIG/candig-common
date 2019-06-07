@@ -1,10 +1,6 @@
 """
 Shim for running the run_tests program during development
 """
-
-
-
-
 import ga4gh.common.run_tests as run_tests
 
 
