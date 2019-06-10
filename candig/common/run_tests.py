@@ -1,9 +1,9 @@
 """
 Emulates a Travis CI run
 """
-import ga4gh.common
-import ga4gh.common.cli as cli
-import ga4gh.common.utils as utils
+import candig.common
+import candig.common.cli as cli
+import candig.common.utils as utils
 
 
 class TravisSimulator(object):
@@ -27,9 +27,9 @@ class TravisSimulator(object):
 
 
 def run_tests_main():
-    parser = cli.createArgumentParser("runs tests for a ga4gh package")
+    parser = cli.createArgumentParser("runs tests for a candig package")
     versionString = "GA4GH Runtests Version {}".format(
-        ga4gh.common.__version__)
+        candig.common.__version__)
     parser.add_argument(
         "--version", version=versionString, action="version")
     parser.parse_args()

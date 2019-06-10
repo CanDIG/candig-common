@@ -25,15 +25,15 @@ with open("requirements.txt") as requirementsFile:
 
 setup(
     # END BOILERPLATE
-    name="ga4gh_common",
+    name="candig_common",
     description="Common utilities for GA4GH packages",
-    packages=["ga4gh", "ga4gh.common"],
-    namespace_packages=["ga4gh"],
-    url="https://github.com/ga4gh/ga4gh-common",
-    use_scm_version={"write_to": "ga4gh/common/_version.py"},
+    packages=["candig", "candig.common"],
+    namespace_packages=["candig"],
+    url="https://github.com/candig/candig-common",
+    use_scm_version={"write_to": "candig/common/_version.py"},
     entry_points={
         "console_scripts": [
-            "ga4gh_run_tests=ga4gh.common.run_tests:run_tests_main",
+            "candig_run_tests=candig.common.run_tests:run_tests_main",
         ],
     },
     # BEGIN BOILERPLATE
@@ -49,7 +49,7 @@ setup(
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.7.2',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
     ],
     keywords=['genomics', 'reference'],

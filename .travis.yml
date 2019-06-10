@@ -13,9 +13,9 @@ install:
   - pip install pip --upgrade
   - pip install setuptools
   - python setup.py sdist
-  - pip install dist/ga4gh_common*.tar.gz
+  - pip install dist/candig_common*.tar.gz
 # every installable in setup.py's entry_points should be tested here
-  - ga4gh_run_tests --version
+  - candig_run_tests --version
 
 before_script:
   - pip install -r dev-requirements.txt
@@ -24,9 +24,9 @@ before_script:
 # run_tests.py runs everything under the script: tag so only put commands
 # under it that we want to run (and want to be able to run) as local tests
 script: 
-  - flake8 run_tests_dev.py setup.py ga4gh tests
+  - flake8 run_tests_dev.py setup.py candig tests
   - nosetests tests
-        --with-coverage --cover-package ga4gh.common
+        --with-coverage --cover-package candig.common
         --cover-inclusive --cover-min-percentage=70
         --cover-branches --cover-erase
 

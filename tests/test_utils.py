@@ -8,7 +8,7 @@ import unittest
 import sys
 import os
 
-import ga4gh.common.utils as utils
+import candig.common.utils as utils
 
 
 class AbstractTestUtils(unittest.TestCase):

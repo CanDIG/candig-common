@@ -1,3 +1,5 @@
-# ga4gh-common
+# candig-common
 
-Common utilities for GA4GH packages
+Common utilities for Candig packages
+
+Forked from ga4gh-common

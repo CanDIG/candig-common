@@ -3,7 +3,7 @@ Tests for common cli functionality
 """
 import unittest
 
-import ga4gh.common.cli as cli
+import candig.common.cli as cli
 
 
 class TestCli(unittest.TestCase):
