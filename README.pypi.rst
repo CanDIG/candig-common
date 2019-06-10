@@ -1,6 +1,8 @@
-============
-GA4GH Common
-============
+=============
+Candig Common
+=============
 
 This package provides common functionality that is used across other
-GA4GH packages.
+Candig packages.
+
+Repo forked from GA4GH

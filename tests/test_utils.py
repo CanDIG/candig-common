@@ -1,18 +1,14 @@
 """
 Tests for common utilities
 """
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
-import mock
+import unittest.mock as mock
 import tempfile
 import subprocess
 import unittest
 import sys
 import os
 
-import ga4gh.common.utils as utils
+import candig.common.utils as utils
 
 
 class AbstractTestUtils(unittest.TestCase):
@@ -210,7 +206,7 @@ class TestUtilsPrintMocked(AbstractTestUtils):
     def setUp(self):
         self.printMock.reset_mock()
 
-    @mock.patch('__builtin__.print', printMock)
+    @mock.patch('builtins.print', printMock)
     def testTimed(self):
         aList = []
 
@@ -218,20 +214,20 @@ class TestUtilsPrintMocked(AbstractTestUtils):
         def timedFunc():
             aList.append(1)
         timedFunc()
-        self.assertEquals(aList, [1])
-        self.assertEquals(self.printMock.call_count, 1)
+        self.assertEqual(aList, [1])
+        self.assertEqual(self.printMock.call_count, 1)
 
-    @mock.patch('__builtin__.print', printMock)
+    @mock.patch('builtins.print', printMock)
     def testLog(self):
         utils.log("message")
-        self.assertEquals(self.printMock.call_count, 1)
+        self.assertEqual(self.printMock.call_count, 1)
 
-    @mock.patch('__builtin__.print', printMock)
+    @mock.patch('builtins.print', printMock)
     def testRequireExecutables(self):
         utils.requireExecutables(self.executables)
         with self.assertRaises(SystemExit):
             utils.requireExecutables([self.nonexistentExecutable])
-        self.assertEquals(self.printMock.call_count, 2)
+        self.assertEqual(self.printMock.call_count, 2)
 
 
 class TestCaptureOutput(unittest.TestCase):
