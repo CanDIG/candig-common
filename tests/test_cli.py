@@ -1,13 +1,9 @@
 """
 Tests for common cli functionality
 """
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
 import unittest
 
-import ga4gh.common.cli as cli
+import candig.common.cli as cli
 
 
 class TestCli(unittest.TestCase):

@@ -1,4 +1,4 @@
-# This file lists the requirements needed to develop on ga4gh/ga4gh-common.
+# This file lists the requirements needed to develop on candig/candig-common.
 
 # Include the requirements.txt file
 -r requirements.txt
