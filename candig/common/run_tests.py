@@ -28,7 +28,7 @@ class TravisSimulator(object):
 
 def run_tests_main():
     parser = cli.createArgumentParser("runs tests for a candig package")
-    versionString = "GA4GH Runtests Version {}".format(
+    versionString = "CanDIG Runtests Version {}".format(
         candig.common.__version__)
     parser.add_argument(
         "--version", version=versionString, action="version")
