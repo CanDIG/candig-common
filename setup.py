@@ -45,7 +45,6 @@ setup(
     author="CanDIG Team",
     author_email="info@distributedgenomics.ca",
     classifiers=[
-        'Development Status :: 3 - Alpha',
         'Intended Audience :: Science/Research',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
